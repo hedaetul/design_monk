@@ -41,7 +41,7 @@ export default function FloatingNavbar() {
     <nav className='fixed  sm:bottom-6 bottom-0 left-1/2 transform -translate-x-1/2 z-50'>
       <div className='bg-black/90 backdrop-blur-md rounded-2xl border-t-green-900 border-t-4 border border-x-green-950 border-b-0  px-2 py-2 flex items-center gap-1 min-w-[100vw] max-w-2xl sm:min-w-[600px] sm:px-4 sm:gap-2'>
         {navItems.map((item, index) => (
-          <NavItem key={item.label} item={item} />
+          <NavItem key={index} item={item} />
         ))}
       </div>
     </nav>
