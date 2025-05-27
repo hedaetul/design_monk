@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -24,3 +24,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-borderGlow {
+  background: linear-gradient(90deg, transparent, #a855f7, transparent);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: borderGlow 2s linear infinite;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  padding: 2px;
+  border-radius: 0.5rem; /* Match button radius */
+}
+
